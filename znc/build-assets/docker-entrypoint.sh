@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e
 
 chown -R znc:znc /znc
 chmod -R 700 /znc
