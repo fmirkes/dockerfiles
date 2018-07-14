@@ -1,6 +1,7 @@
 #!/bin/sh
 set -eu
 
+chown -R nginx:www-data /var/www/selfoss && chmod -R o-rwx /var/www/selfoss
 for _DATA_DIR in "data/cache" "data/favicons" "data/fulltextrss" "data/logs" "data/sqlite" "data/thumbnails" "data/thumbnails" "public"; do
     mkdir -p "/var/www/selfoss/${_DATA_DIR}"
     chown -R nginx:www-data "/var/www/selfoss/${_DATA_DIR}"

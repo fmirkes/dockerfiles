@@ -16,7 +16,6 @@ RUN chmod +x /docker-entrypoint.sh \
     && mkdir -p /var/log/supervisor && mkdir -p /run/supervisor \
     && mkdir /run/nginx && mkdir /etc/nginx/certs && rm /etc/nginx/conf.d/default.conf \
     && mkdir /var/www/selfoss && unzip -d /var/www/selfoss /tmp/selfoss.zip && rm /tmp/selfoss.zip \
-    && chown -R nginx:www-data /var/www/selfoss && chmod -R o-rwx /var/www/selfoss \
     && sed -i '/^user = nobody/s/nobody/nginx/g' /etc/php7/php-fpm.d/www.conf \
     && sed -i '/^group = nobody/s/nobody/www-data/g' /etc/php7/php-fpm.d/www.conf \
     && sed -i 's/; cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/g' /etc/php7/php.ini
