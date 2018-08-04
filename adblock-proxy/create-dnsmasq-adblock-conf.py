@@ -13,7 +13,9 @@ abp_lists = ["https://filters.adtidy.org/extension/chromium/filters/15.txt",
              "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt",
              "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt",
              "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/resource-abuse.txt",
-             "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt"]
+             "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt",
+             "https://easylist.to/easylist/easylist.txt",
+             "https://easylist.to/easylist/easyprivacy.txt"]
 
 hosts_files = []
 
