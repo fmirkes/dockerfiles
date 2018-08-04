@@ -9,10 +9,8 @@ simple_blocklists = ["https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt
                      "https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt",
                      "https://s3.amazonaws.com/lists.disconnect.me/simple_malware.txt"]
 
-abp_lists = ["https://easylist.to/easylist/easylist.txt",
-             "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt",
-             "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/EnglishFilter/sections/adservers.txt",
-             "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/EnglishFilter/sections/adservers_firstparty.txt"]
+abp_lists = ["https://filters.adtidy.org/extension/chromium/filters/15.txt",
+             "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt"]
 
 hosts_files = []
 
