@@ -11,8 +11,11 @@ RUN chmod +x /docker-entrypoint.sh \
     && apk --no-cache add supervisor dnsmasq tinyproxy nginx \
     && mkdir -p /var/log/supervisor && mkdir -p /run/supervisor \
     && mkdir /run/nginx && rm /etc/nginx/conf.d/default.conf \
-    && sed -i '/^Allow 127.0.0.1/s/^/#/g' /etc/tinyproxy/tinyproxy.conf \
-    && sed -i '/^#DisableViaHeader Yes/s/^#//g' /etc/tinyproxy/tinyproxy.conf \
+    && sed -i '/^Allow 127.0.0.1/s/^/#/' /etc/tinyproxy/tinyproxy.conf \
+    && sed -i '/^#DisableViaHeader Yes/s/^#//' /etc/tinyproxy/tinyproxy.conf \
+    && sed -i 's/^MinSpareServers [0-9][0-9]*$/MinSpareServers 80/' /etc/tinyproxy/tinyproxy.conf \
+    && sed -i 's/^MaxSpareServers [0-9][0-9]*$/MaxSpareServers 100/' /etc/tinyproxy/tinyproxy.conf \
+    && sed -i 's/^StartServers [0-9][0-9]*$/StartServers 100/' /etc/tinyproxy/tinyproxy.conf \
     && echo 'resolv-file=/etc/resolv.conf.dnsmasq' >> /etc/dnsmasq.conf
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
