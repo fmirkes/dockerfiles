@@ -10,7 +10,10 @@ simple_blocklists = ["https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt
                      "https://s3.amazonaws.com/lists.disconnect.me/simple_malware.txt"]
 
 abp_lists = ["https://filters.adtidy.org/extension/chromium/filters/15.txt",
-             "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt"]
+             "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt",
+             "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt",
+             "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/resource-abuse.txt",
+             "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt"]
 
 hosts_files = []
 
