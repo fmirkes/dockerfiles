@@ -10,6 +10,6 @@ docker build -t adblock-proxy .
 
 ## Run
 ```
-docker run -d -p 8888:8888 adblock-proxy
+docker run --cap-add=NET_ADMIN --cap-add=NET_RAW -d -p 8888:8888 adblock-proxy
 ```
 Point your browsers http/https proxy to *\<docker-host\>:8888*.

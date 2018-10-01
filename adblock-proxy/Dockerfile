@@ -8,7 +8,7 @@ ADD build-assets/nginx-empty-gif.conf /etc/nginx/conf.d/empty-gif.conf
 ADD build-assets/supervisord.conf /etc/supervisord.conf
 
 RUN chmod +x /docker-entrypoint.sh \
-    && apk --no-cache add supervisor dnsmasq tinyproxy nginx \
+    && apk --no-cache add supervisor dnsmasq tinyproxy nginx iptables \
     && mkdir -p /var/log/supervisor && mkdir -p /run/supervisor \
     && mkdir /run/nginx && rm /etc/nginx/conf.d/default.conf \
     && sed -i '/^Allow 127.0.0.1/s/^/#/' /etc/tinyproxy/tinyproxy.conf \
