@@ -11,5 +11,5 @@ docker build -t adblock-dns .
 docker run --cap-add=NET_ADMIN -p 53:53 adblock-dns
 
 # set the ip for resolved ad host names
-docker run --cap-add=NET_ADMIN -e NULL_HOST=127.0.0.1 -p 53:53 adblock-dns
+docker run --cap-add=NET_ADMIN -e NULL_HOST=127.0.0.1 -p 53:53/tcp -p 53:53/udp adblock-dns
 ```
